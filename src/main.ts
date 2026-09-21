@@ -182,9 +182,11 @@ async function vodBuilder(params: EncoderOptionsBuilderParams) : Promise<Encoder
     // You can also return a promise
     let options : EncoderOptions = {
         scaleFilter: {
-            // software decode requires specifying pixel format for hardware filter and upload it to GPU
             name: pluginSettings.hardwareDecode ? 'scale_vaapi' : 'format=nv12,hwupload,scale_vaapi'
         },
+        videoFilters: [
+            { name: 'format', rawOptions: 'nv12' }   // + это
+        ],
         inputOptions: shouldInitVaapi ? buildInitOptions() : [],
         outputOptions: [
             `-quality ${pluginSettings.quality}`,
