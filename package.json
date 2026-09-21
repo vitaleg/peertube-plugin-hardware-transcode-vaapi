@@ -10,9 +10,9 @@
         "peertube",
         "plugin"
     ],
-    "homepage": "https://github.com/TheoLeCalvar/peertube-plugin-hardware-transcode-vaapi",
+    "homepage": "https://github.com/vitaleg/peertube-plugin-hardware-transcode-vaapi",
     "author": "gdsn",
-    "bugs": "https://github.com/TheoLeCalvar/peertube-plugin-hardware-transcode-vaapi",
+    "bugs": "https://github.com/vitaleg/peertube-plugin-hardware-transcode-vaapi",
     "library": "./dist/main.js",
     "files": [
         "/dist"
